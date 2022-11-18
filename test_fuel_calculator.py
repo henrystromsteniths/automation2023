@@ -38,3 +38,4 @@ def test_answer():
     assert (calculate_total_cost_of_petrol()):
 
 test_answer()
+    .
