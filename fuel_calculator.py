@@ -21,5 +21,5 @@ elif fuel_type == "D":
 
 else:
     print("Please answer using either the P or D characters.")
-
+.
 
