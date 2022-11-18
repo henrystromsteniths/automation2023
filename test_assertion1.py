@@ -5,7 +5,7 @@ def func(x):
 
 def test_answer():
     assert func(x) == 4
-    .
+
 
 
 
