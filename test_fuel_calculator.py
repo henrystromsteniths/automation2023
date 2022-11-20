@@ -26,7 +26,7 @@ if (fuel_type != "P") and (fuel_type != "D"):
     print("Please answer using either the P or D characters.")
 
 if fuel_type == "P":
-    assert ( == 200.0)
+    assert ( (fuel_type in "P") or (fuel_type in "D"))
 
 if fuel_type == "D":
     assert (float(total_cost_of_diesel) == float(300.0))
@@ -35,7 +35,7 @@ def calculate_total_cost_of_petrol():
     return (distance / 10 * cost_of_petrol)
 
 def test_answer():
-    assert (calculate_total_cost_of_petrol()):
+    assert (calculate_total_cost_of_petrol == 200.00)
 
 test_answer()
 
