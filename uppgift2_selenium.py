@@ -8,7 +8,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 '#open rexel website in chrome'
 driver.get("https://www.rexel.se")
 driver.fullscreen_window()
-time.sleep(8)
+time.sleep(4)
 soki = driver.find_element(By.XPATH, '//*[@id="search"]')
 soki.send_keys('920021025303')
 soki.send_keys(Keys.ENTER)
