@@ -30,6 +30,17 @@ def test_kollapris():
     item3 = item3.text
     assert "8 369 kr" in item3
 
+def test_intobasket1():
+    driver.find_element(By.XPATH, "/html/body").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "//*[@id='main-area-section']/div[1]/div[2]/div[9]/button/span")
+    driver.find_element(By.XPATH, "// *[ @ id = 'tempered-glass-step-b'] / div[3] / div[2] / a").click()
+    basket1 = driver.find_element(By.XPATH, "// *[ @ id = 'minicart-count']")
+    basket1 = basket1.text
+    assert basket1 == "1"
+
+
+
 
 
 
