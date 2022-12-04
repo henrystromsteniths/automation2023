@@ -20,5 +20,10 @@ def test_kollamob():
     item1 = item1.text
     assert "iPhone 12 Pro" in item1
 
+def test_kollaskick():
+    item2 = driver.find_element(By.XPATH, "//*[@id='campaign-collection-page']/div[2]/div[2]/a[6]/div[2]/span/div/span[2]")
+    item2 = item2.text
+    assert "Utmärkt" in item2
+
 
 
