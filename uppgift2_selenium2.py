@@ -25,5 +25,15 @@ def test_kollaskick():
     item2 = item2.text
     assert "Utmärkt" in item2
 
+def test_kollapris():
+    item3 = driver.find_element(By.XPATH, "//*[@id='campaign-collection-page']/div[2]/div[2]/a[6]/div[2]/div[4]/span[1]")
+    item3 = item3.text
+    assert "8 369 kr" in item3
+
+
+
+
+
+
 
 
