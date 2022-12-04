@@ -9,7 +9,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.get("https://swappie.com/se/jul")
 driver.fullscreen_window()
 time.sleep(3)
-# driver.find_element(By.XPATH, "//*[@id='declineAllConsentSummary']").click()
+driver.find_element(By.XPATH, "//*[@id='onetrust-reject-all-handler']").click()
 
 
 def test_kollamob():
@@ -28,11 +28,10 @@ def test_kollapris():
     assert "8 369 kr" in item3
 
 def test_intobasket1():
-    driver.find_element(By.XPATH, "/html/body").click()
-    time.sleep(5)
+    driver.find_element(By.XPATH, "//*[@id='campaign-collection-page']/div[2]/div[4]/a[7]/div[1]/div[1]/img").click()
+    time.sleep(3)
     driver.find_element(By.XPATH, "//*[@id='main-area-section']/div[1]/div[2]/div[9]/button/span").click()
-    time.sleep(5)
-    driver.find_element(By.XPATH, "// *[ @ id = 'tempered-glass-step-b'] / div[3] / div[2] / a").click()
+    time.sleep(3)
     basket1 = driver.find_element(By.XPATH, "// *[ @ id = 'minicart-count']")
     basket1 = basket1.text
     assert basket1 == "1"
