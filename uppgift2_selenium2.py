@@ -10,10 +10,7 @@ driver.get("https://swappie.com/se/jul")
 driver.fullscreen_window()
 time.sleep(3)
 # driver.find_element(By.XPATH, "//*[@id='declineAllConsentSummary']").click()
-# soki = driver.find_element(By.XPATH, '//*[@id="search"]')
-# soki.send_keys('iPhone 12 Pro')
-# soki.send_keys(Keys.ENTER)
-# time.sleep(4)
+
 
 def test_kollamob():
     item1 = driver.find_element(By.XPATH, "//*[@id='campaign-collection-page']/div[2]/div[2]/a[6]/div[2]/div[1]/span")
@@ -32,8 +29,9 @@ def test_kollapris():
 
 def test_intobasket1():
     driver.find_element(By.XPATH, "/html/body").click()
-    time.sleep(2)
-    driver.find_element(By.XPATH, "//*[@id='main-area-section']/div[1]/div[2]/div[9]/button/span")
+    time.sleep(5)
+    driver.find_element(By.XPATH, "//*[@id='main-area-section']/div[1]/div[2]/div[9]/button/span").click()
+    time.sleep(5)
     driver.find_element(By.XPATH, "// *[ @ id = 'tempered-glass-step-b'] / div[3] / div[2] / a").click()
     basket1 = driver.find_element(By.XPATH, "// *[ @ id = 'minicart-count']")
     basket1 = basket1.text
