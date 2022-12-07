@@ -20,12 +20,14 @@ def test_kollaid():
     item1 = item1.text
     assert "1545302" in item1
 
-def test_intobasket1():
+def test_intobasket2():
+    driver.find_element(By.XPATH, "//*[@id='addToCartDiv_1545302']/span").click()
+    time.sleep(2)
     driver.find_element(By.XPATH, "//*[@id='addToCartDiv_1545302']/span").click()
     time.sleep(2)
     basket1 = driver.find_element(By.XPATH, "//*[@id='miniCartContainer']/span")
     basket1 = basket1.text
-    assert basket1 == "1"
+    assert basket1 == "2"
 
 
 
