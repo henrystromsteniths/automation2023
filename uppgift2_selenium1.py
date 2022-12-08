@@ -23,6 +23,9 @@ def test_kollaid():
 def test_intobasket2():
     driver.find_element(By.XPATH, "//*[@id='addToCartDiv_1545302']/span").click()
     time.sleep(2)
+    basket1 = driver.find_element(By.XPATH, "//*[@id='miniCartContainer']/span")
+    basket1 = basket1.text
+    assert basket1 == "1"
     driver.find_element(By.XPATH, "//*[@id='addToCartDiv_1545302']/span").click()
     time.sleep(2)
     basket1 = driver.find_element(By.XPATH, "//*[@id='miniCartContainer']/span")
